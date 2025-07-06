@@ -91,7 +91,6 @@
             font-style: italic;
             color: #555;
         }
-        /* --- RESPONSIVE STYLES --- */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2rem;
@@ -117,7 +116,7 @@
                 border-bottom: 1px solid #eee;
                 position: relative;
                 padding-left: 50%;
-                min-height: 30px; /* Ensures space for the label */
+                min-height: 30px;
             }
             td:before {
                 position: absolute;
@@ -129,14 +128,10 @@
                 font-weight: bold;
                 color: var(--secondary-color);
             }
-
-            /* --- FIX: Specific labels for the Overview table --- */
             .overview table td:nth-of-type(1):before { content: "Phase"; }
             .overview table td:nth-of-type(2):before { content: "Weeks"; }
             .overview table td:nth-of-type(3):before { content: "Core Focus"; }
             .overview table td:nth-of-type(4):before { content: "Outcomes"; }
-
-            /* --- Labels for all Module tables --- */
             .module table td:nth-of-type(1):before { content: "Week"; }
             .module table td:nth-of-type(2):before { content: "Focus Area"; }
             .module table td:nth-of-type(3):before { content: "Daily Topics"; }
@@ -169,7 +164,7 @@
         const curriculum = {
             overview: {
                 title: "Curriculum Overview",
-                [span_0](start_span)description: "The 24-week program is divided into six distinct phases, each building upon the last, ensuring a smooth transition from beginner to professional proficiency.[span_0](end_span) [span_1](start_span)The table below provides a high-level roadmap, allowing learners and program administrators to quickly grasp the entire journey.[span_1](end_span)",
+                description: "The 24-week program is divided into six distinct phases, each building upon the last, ensuring a smooth transition from beginner to professional proficiency. The table below provides a high-level roadmap, allowing learners and program administrators to quickly grasp the entire journey.",
                 table: [
                     { Phase: 1, Weeks: "1-4", CoreFocus: "Foundations: Python, Data Science, & Essential Math", Outcomes: "Proficiency in Python for data manipulation and visualization; foundational understanding of statistics, probability, and linear algebra." },
                     { Phase: 2, Weeks: "5-8", CoreFocus: "Core Machine Learning: Supervised & Unsupervised Learning", Outcomes: "Ability to implement, train, and evaluate classical ML models; understanding of feature engineering, model tuning, and cross-validation." },
@@ -182,7 +177,7 @@
             modules: [
                 {
                     title: "Module 1: Foundations – Python, Data Science, & Essential Mathematics (Weeks 1-4)",
-                    [span_2](start_span)description: "This initial phase establishes the indispensable bedrock for any aspiring AI/ML engineer, building proficiency in Python programming, data manipulation, visualization, and core mathematical concepts.[span_2](end_span)",
+                    description: "This initial phase establishes the indispensable bedrock for any aspiring AI/ML engineer, building proficiency in Python programming, data manipulation, visualization, and core mathematical concepts.",
                     weeks: [
                         { week: 1, focus: "Python Fundamentals & Jupyter", topics: "Day 1: Python syntax, data types, variables. Day 2: Control flow, functions. Day 3: OOP basics. Day 4: Intro to Jupyter. Day 5: Jupyter practice, debugging.", project: "Set up environment. Complete 'Hello World' in Jupyter. Practice basic Python problems." },
                         { week: 2, focus: "NumPy & Pandas for Data Handling", topics: "Day 1: NumPy arrays. Day 2: Array operations. Day 3: Matrix multiplication, aggregations. Day 4: Pandas Series & DataFrames. Day 5: Data selection (loc, iloc).", project: "Implement linear algebra ops with NumPy. Load a dataset with Pandas." },
@@ -192,7 +187,7 @@
                 },
                 {
                     title: "Module 2: Core Machine Learning – Supervised & Unsupervised Learning (Weeks 5-8)",
-                    [span_3](start_span)description: "This phase delves into core machine learning, covering supervised and unsupervised learning paradigms.[span_3](end_span) [span_4](start_span)Learners will implement, train, and evaluate classical ML models, master data preprocessing and feature engineering, and apply model tuning and validation strategies.[span_4](end_span)",
+                    description: "This phase delves into core machine learning, covering supervised and unsupervised learning paradigms. Learners will implement, train, and evaluate classical ML models.",
                     weeks: [
                         { week: 5, focus: "Supervised ML: Regression & Classification", topics: "Day 1: ML Paradigms. Day 2: Train-Test Split. Day 3: Feature Engineering. Day 4: Linear Regression. Day 5: Logistic Regression.", project: "Build linear and logistic regression models for prediction and classification tasks." },
                         { week: 6, focus: "Supervised ML: Advanced Algorithms", topics: "Day 1: Feature Scaling. Day 2: K-Nearest Neighbors (KNN). Day 3: Support Vector Machines (SVM). Day 4: Random Forest. Day 5: XGBoost.", project: "Implement KNN, Random Forest, or XGBoost. Compare model performance." },
@@ -202,7 +197,7 @@
                 },
                 {
                     title: "Module 3: Deep Learning Fundamentals & Computer Vision (Weeks 9-12)",
-                    [span_5](start_span)description: "This phase transitions into deep learning and Computer Vision, focusing on neural network architectures, especially Convolutional Neural Networks (CNNs).[span_5](end_span)",
+                    description: "This phase transitions into deep learning and Computer Vision, focusing on neural network architectures, especially Convolutional Neural Networks (CNNs).",
                     weeks: [
                         { week: 9, focus: "Deep Learning Fundamentals & Keras/TensorFlow", topics: "Day 1: Neural Networks basics. Day 2: Backpropagation intuition. Day 3: Intro to TensorFlow/Keras. Day 4: Building simple models. Day 5: Overfitting/underfitting, regularization.", project: "Build and train a simple neural network for MNIST classification." },
                         { week: 10, focus: "Convolutional Neural Networks (CNN) Architecture", topics: "Day 1: Intro to CNNs. Day 2: Convolutional layers. Day 3: Pooling layers. Day 4: Building a basic CNN in Keras. Day 5: Understanding CNN parameters.", project: "Implement a small CNN from scratch for Fashion MNIST classification." },
@@ -212,7 +207,7 @@
                 },
                 {
                     title: "Module 4: Natural Language Processing (NLP) & Transformers (Weeks 13-16)",
-                    [span_6](start_span)description: "This phase focuses on Natural Language Processing (NLP), from foundational text processing to the Transformer architecture.[span_6](end_span)",
+                    description: "This phase focuses on Natural Language Processing (NLP), from foundational text processing to the Transformer architecture.",
                     weeks: [
                         { week: 13, focus: "NLP Text Preprocessing & Vectorization", topics: "Day 1: Tokenization. Day 2: Stopword removal, stemming/lemmatization. Day 3: CountVectorizer. Day 4: TF-IDF Vectorizer. Day 5: Building a preprocessing pipeline.", project: "Preprocess a text dataset and build a simple classifier with Logistic Regression." },
                         { week: 14, focus: "Word Embeddings & Text Classification", topics: "Day 1: Word Embeddings theory. Day 2: Word2Vec. Day 3: GloVe. Day 4: Naive Bayes. Day 5: SVM for text.", project: "Implement word embeddings. Build and compare Naive Bayes and SVM text classifiers." },
@@ -222,7 +217,7 @@
                 },
                 {
                     title: "Module 5: Large Language Models (LLMs) & Agent Design (Weeks 17-20)",
-                    [span_7](start_span)description: "This phase deeply explores Large Language Models (LLMs) and AI agent design.[span_7](end_span)",
+                    description: "This phase deeply explores Large Language Models (LLMs) and AI agent design.",
                     weeks: [
                         { week: 17, focus: "Prompt Engineering & LLM APIs", topics: "Day 1: Intro to LLMs. Day 2: Prompting principles (Zero-shot, Few-shot, CoT). Day 3: LLM APIs. Day 4: Structured output (JSON). Day 5: Tool use/Function Calling.", project: "Build a simple chatbot that uses an API tool (e.g., weather bot)." },
                         { week: 18, focus: "LangChain, LangGraph & Agents", topics: "Day 1: AI Agents concept. Day 2: LangChain basics. Day 3: Intro to LangGraph. Day 4: Multi-agent orchestration. Day 5: Agent-to-Agent Communication.", project: "Build a simple multi-step research assistant agent using LangChain/LangGraph." },
@@ -232,7 +227,7 @@
                 },
                 {
                     title: "Module 6: Full-Stack AI Development, MLOps & Capstones (Weeks 21-24)",
-                    [span_8](start_span)description: "The final phase integrates all learned concepts into building and deploying end-to-end AI applications.[span_8](end_span)",
+                    description: "The final phase integrates all learned concepts into building and deploying end-to-end AI applications.",
                     weeks: [
                         { week: 21, focus: "Backend APIs for AI Applications", topics: "Day 1: FastAPI basics. Day 2: CRUD operations. Day 3: Dependency Injection, auth. Day 4: Database integration (SQLModel). Day 5: CORS, Swagger UI.", project: "Build a FastAPI backend for a simple AI model from a previous module." },
                         { week: 22, focus: "UI Development & Deployment", topics: "Day 1: Streamlit basics. Day 2: Building chat UIs. Day 3: Integrating Streamlit with FastAPI. Day 4: Docker basics. Day 5: Docker Compose.", project: "Build a Streamlit UI for the FastAPI backend and dockerize both." },
@@ -245,8 +240,9 @@
 
         function renderCurriculum() {
             const container = document.getElementById('curriculum-container');
+            let finalHtml = '';
 
-            // Render Overview
+            // --- Build Overview HTML ---
             let overviewHtml = `
                 <div class="overview">
                     <div class="overview-header">${curriculum.overview.title}</div>
@@ -274,9 +270,9 @@
                 `;
             });
             overviewHtml += `</tbody></table></div></div>`;
-            container.innerHTML += overviewHtml;
+            finalHtml += overviewHtml;
 
-            // Render Modules
+            // --- Build Modules HTML ---
             curriculum.modules.forEach(module => {
                 let moduleHtml = `
                     <div class="module">
@@ -305,12 +301,14 @@
                     `;
                 });
                 moduleHtml += `</tbody></table></div></div>`;
-                container.innerHTML += moduleHtml;
+                finalHtml += moduleHtml;
             });
+
+            // --- Inject final HTML into the container once ---
+            container.innerHTML = finalHtml;
         }
 
         document.addEventListener('DOMContentLoaded', renderCurriculum);
     </script>
 </body>
 </html>
-

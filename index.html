@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI/ML Crash Course Curriculum (2025)</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #ecf0f1;
+            --text-color: #34495e;
+            --card-bg-color: #ffffff;
+            --header-bg-color: #3498db;
+            --header-text-color: #ffffff;
+            --table-border-color: #bdc3c7;
+            --shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: var(--header-text-color);
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .module, .overview {
+            background-color: var(--card-bg-color);
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        .module-header, .overview-header {
+            background-color: var(--header-bg-color);
+            color: var(--header-text-color);
+            padding: 15px 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .module-content, .overview-content {
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--table-border-color);
+        }
+        th {
+            background-color: #ecf0f1;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        .key-outcomes ul {
+            list-style-type: '✅ ';
+            padding-left: 20px;
+        }
+        .weekend-project {
+            font-style: italic;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .module-header, .overview-header {
+                font-size: 1.3rem;
+            }
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            tr {
+                border: 1px solid var(--table-border-color);
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            td {
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+            }
+            td:before {
+                position: absolute;
+                top: 12px;
+                left: 10px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                font-weight: bold;
+                color: var(--secondary-color);
+            }
+            td:nth-of-type(1):before { content: "Week"; }
+            td:nth-of-type(2):before { content: "Focus Area"; }
+            td:nth-of-type(3):before { content: "Daily Topics"; }
+            td:nth-of-type(4):before { content: "Weekend Project"; }
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>AI & ML Crash Course: 2025</h1>
+        <p>A 24-week journey from Beginner to Professional</p>
+    </header>
+
+    <div class="container" id="curriculum-container">
+        </div>
+
+    <footer>
+        <p>&copy; 2025 AI ML Crashbook. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const curriculum = {
+            overview: {
+                title: "Curriculum Overview",
+                description: "The 24-week program is divided into six distinct phases, each building upon the last, ensuring a smooth transition from beginner to professional proficiency. The table below provides a high-level roadmap, allowing learners and program administrators to quickly grasp the entire journey.",
+                table: [
+                    { Phase: 1, Weeks: "1-4", CoreFocus: "Foundations: Python, Data Science, & Essential Math", Outcomes: "Proficiency in Python for data manipulation and visualization; foundational understanding of statistics, probability, and linear algebra." },
+                    { Phase: 2, Weeks: "5-8", CoreFocus: "Core Machine Learning: Supervised & Unsupervised Learning", Outcomes: "Ability to implement, train, and evaluate classical ML models; understanding of feature engineering, model tuning, and cross-validation." },
+                    { Phase: 3, Weeks: "9-12", CoreFocus: "Deep Learning Fundamentals & Computer Vision", Outcomes: "Competence in designing, training, and deploying Convolutional Neural Networks (CNNs); practical experience with image classification and data augmentation." },
+                    { Phase: 4, Weeks: "13-16", CoreFocus: "Natural Language Processing (NLP) & Transformers", Outcomes: "Expertise in NLP fundamentals, text vectorization, word embeddings, and understanding the core Transformer architecture." },
+                    { Phase: 5, Weeks: "17-20", CoreFocus: "Large Language Models (LLMs) & Agent Design", Outcomes: "Mastery of prompt engineering, LLM APIs, agent orchestration with frameworks like LangChain, RAG, and fine-tuning techniques." },
+                    { Phase: 6, Weeks: "21-24", CoreFocus: "Full-Stack AI Development, MLOps & Capstones", Outcomes: "Ability to build, deploy, monitor, and maintain end-to-end AI applications, integrating various AI modalities and MLOps best practices." }
+                ]
+            },
+            modules: [
+                {
+                    title: "Module 1: Foundations – Python, Data Science, & Essential Mathematics (Weeks 1-4)",
+                    description: "This initial phase establishes the indispensable bedrock for any aspiring AI/ML engineer, building proficiency in Python programming, data manipulation, visualization, and core mathematical concepts.",
+                    weeks: [
+                        { week: 1, focus: "Python Fundamentals & Jupyter", topics: "Day 1: Python syntax, data types, variables. Day 2: Control flow, functions. Day 3: OOP basics. Day 4: Intro to Jupyter. Day 5: Jupyter practice, debugging.", project: "Set up environment. Complete 'Hello World' in Jupyter. Practice basic Python problems." },
+                        { week: 2, focus: "NumPy & Pandas for Data Handling", topics: "Day 1: NumPy arrays. Day 2: Array operations. Day 3: Matrix multiplication, aggregations. Day 4: Pandas Series & DataFrames. Day 5: Data selection (loc, iloc).", project: "Implement linear algebra ops with NumPy. Load a dataset with Pandas." },
+                        { week: 3, focus: "Data Cleaning, Transformation & Visualization", topics: "Day 1: Data Loading. Day 2: Data Cleaning (missing values). Day 3: Data Transformation (type casting, apply). Day 4: Matplotlib basics. Day 5: Seaborn intro.", project: "Load, clean, and visualize a real-world dataset. Create a visual report." },
+                        { week: 4, focus: "Probability & Linear Algebra", topics: "Day 1: Descriptive Statistics. Day 2: Probability basics. Day 3: Bayes' Theorem. Day 4: Hypothesis testing. Day 5: A/B testing principles.", project: "Analyze a dataset with descriptive stats. Implement Bayes' Theorem. Conduct a simple A/B test simulation." }
+                    ]
+                },
+                {
+                    title: "Module 2: Core Machine Learning – Supervised & Unsupervised Learning (Weeks 5-8)",
+                    description: "This phase delves into core machine learning, covering supervised and unsupervised learning paradigms. Learners will implement, train, and evaluate classical ML models.",
+                    weeks: [
+                        { week: 5, focus: "Supervised ML: Regression & Classification", topics: "Day 1: ML Paradigms. Day 2: Train-Test Split. Day 3: Feature Engineering. Day 4: Linear Regression. Day 5: Logistic Regression.", project: "Build linear and logistic regression models for prediction and classification tasks." },
+                        { week: 6, focus: "Supervised ML: Advanced Algorithms", topics: "Day 1: Feature Scaling. Day 2: K-Nearest Neighbors (KNN). Day 3: Support Vector Machines (SVM). Day 4: Random Forest. Day 5: XGBoost.", project: "Implement KNN, Random Forest, or XGBoost. Compare model performance." },
+                        { week: 7, focus: "Unsupervised ML: Clustering & Dimensionality Reduction", topics: "Day 1: K-Means Clustering. Day 2: DBSCAN. Day 3: Principal Component Analysis (PCA). Day 4: Unsupervised Learning Applications. Day 5: Comparing algorithms.", project: "Perform customer segmentation with K-Means/DBSCAN. Apply PCA for visualization." },
+                        { week: 8, focus: "Model Evaluation, Tuning & Best Practices", topics: "Day 1: Classification metrics. Day 2: Advanced Classification Metrics (ROC/AUC). Day 3: Regression metrics. Day 4: Hyperparameter Tuning (GridSearchCV). Day 5: Cross-validation techniques.", project: "Evaluate all previous models. Perform hyperparameter tuning with GridSearchCV." }
+                    ]
+                },
+                {
+                    title: "Module 3: Deep Learning Fundamentals & Computer Vision (Weeks 9-12)",
+                    description: "This phase transitions into deep learning and Computer Vision, focusing on neural network architectures, especially Convolutional Neural Networks (CNNs).",
+                    weeks: [
+                        { week: 9, focus: "Deep Learning Fundamentals & Keras/TensorFlow", topics: "Day 1: Neural Networks basics. Day 2: Backpropagation intuition. Day 3: Intro to TensorFlow/Keras. Day 4: Building simple models. Day 5: Overfitting/underfitting, regularization.", project: "Build and train a simple neural network for MNIST classification." },
+                        { week: 10, focus: "Convolutional Neural Networks (CNN) Architecture", topics: "Day 1: Intro to CNNs. Day 2: Convolutional layers. Day 3: Pooling layers. Day 4: Building a basic CNN in Keras. Day 5: Understanding CNN parameters.", project: "Implement a small CNN from scratch for Fashion MNIST classification." },
+                        { week: 11, focus: "Image Classification Project & Data Augmentation", topics: "Day 1: CIFAR-10 dataset. Day 2: Data preprocessing for CIFAR-10. Day 3: Designing a CNN for CIFAR-10. Day 4: Data Augmentation theory. Day 5: Implementing augmentation.", project: "Complete CIFAR-10 image classification. Apply data augmentation and observe impact." },
+                        { week: 12, focus: "Transfer Learning & Advanced Computer Vision", topics: "Day 1: Intro to Transfer Learning. Day 2: Feature Extraction. Day 3: Fine-tuning pre-trained models. Day 4: Object Detection basics. Day 5: Choosing models, ethical considerations.", project: "Use a pre-trained model (e.g., MobileNetV2) for a new classification task." }
+                    ]
+                },
+                {
+                    title: "Module 4: Natural Language Processing (NLP) & Transformers (Weeks 13-16)",
+                    description: "This phase focuses on Natural Language Processing (NLP), from foundational text processing to the Transformer architecture.",
+                    weeks: [
+                        { week: 13, focus: "NLP Text Preprocessing & Vectorization", topics: "Day 1: Tokenization. Day 2: Stopword removal, stemming/lemmatization. Day 3: CountVectorizer. Day 4: TF-IDF Vectorizer. Day 5: Building a preprocessing pipeline.", project: "Preprocess a text dataset and build a simple classifier with Logistic Regression." },
+                        { week: 14, focus: "Word Embeddings & Text Classification", topics: "Day 1: Word Embeddings theory. Day 2: Word2Vec. Day 3: GloVe. Day 4: Naive Bayes. Day 5: SVM for text.", project: "Implement word embeddings. Build and compare Naive Bayes and SVM text classifiers." },
+                        { week: 15, focus: "Recurrent Neural Networks (RNNs) & Sequence Models", topics: "Day 1: Intro to RNNs. Day 2: Long Short-Term Memory (LSTM). Day 3: Gated Recurrent Units (GRUs). Day 4: Building RNNs in Keras. Day 5: Sequence generation basics.", project: "Build an LSTM or GRU model for sentiment analysis." },
+                        { week: 16, focus: "Transformer Architecture & LLM Introduction", topics: "Day 1: 'Attention is All You Need' overview. Day 2: Self-attention mechanism. Day 3: Positional Encoding. Day 4: Encoder-Decoder architecture. Day 5: Intro to BERT and GPT.", project: "Read 'Attention is All You Need'. Explore Hugging Face Transformers library." }
+                    ]
+                },
+                {
+                    title: "Module 5: Large Language Models (LLMs) & Agent Design (Weeks 17-20)",
+                    description: "This phase deeply explores Large Language Models (LLMs) and AI agent design, covering prompt engineering, RAG, and fine-tuning.",
+                    weeks: [
+                        { week: 17, focus: "Prompt Engineering & LLM APIs", topics: "Day 1: Intro to LLMs. Day 2: Prompting principles (Zero-shot, Few-shot, CoT). Day 3: LLM APIs. Day 4: Structured output (JSON). Day 5: Tool use/Function Calling.", project: "Build a simple chatbot that uses an API tool (e.g., weather bot)." },
+                        { week: 18, focus: "LangChain, LangGraph & Agents", topics: "Day 1: AI Agents concept. Day 2: LangChain basics. Day 3: Intro to LangGraph. Day 4: Multi-agent orchestration. Day 5: Agent-to-Agent Communication.", project: "Build a simple multi-step research assistant agent using LangChain/LangGraph." },
+                        { week: 19, focus: "Vector Databases & Retrieval-Augmented Generation (RAG)", topics: "Day 1: Intro to Vector Databases. Day 2: Popular Vector DBs. Day 3: Embeddings. Day 4: RAG concept. Day 5: Advanced RAG techniques.", project: "Build a PDF chatbot with citations using RAG and a vector database." },
+                        { week: 20, focus: "LLM Fine-tuning, Quantization & PEFT", topics: "Day 1: LLM Evaluation (LLM-as-a-Judge). Day 2: RLHF. Day 3: Continuous Learning. Day 4: Fine-tuning methods (LoRA/QLORA). Day 5: Quantization.", project: "Fine-tune a small open-source LLM on a specific dataset using LoRA/QLORA." }
+                    ]
+                },
+                {
+                    title: "Module 6: Full-Stack AI Development, MLOps & Capstones (Weeks 21-24)",
+                    description: "The final phase integrates all learned concepts into building and deploying end-to-end AI applications using modern stacks and MLOps principles.",
+                    weeks: [
+                        { week: 21, focus: "Backend APIs for AI Applications", topics: "Day 1: FastAPI basics. Day 2: CRUD operations. Day 3: Dependency Injection, auth. Day 4: Database integration (SQLModel). Day 5: CORS, Swagger UI.", project: "Build a FastAPI backend for a simple AI model from a previous module." },
+                        { week: 22, focus: "UI Development & Deployment", topics: "Day 1: Streamlit basics. Day 2: Building chat UIs. Day 3: Integrating Streamlit with FastAPI. Day 4: Docker basics. Day 5: Docker Compose.", project: "Build a Streamlit UI for the FastAPI backend and dockerize both." },
+                        { week: 23, focus: "MLOps & Observability", topics: "Day 1: MLOps principles. Day 2: MLFlow. Day 3: Caching strategies (Redis). Day 4: LLM evaluation metrics. Day 5: Kubernetes, GitHub Actions.", project: "Set up MLFlow to track experiments. Implement caching for an LLM app." },
+                        { week: 24, focus: "Capstone Projects & Advanced Systems", topics: "Day 1: Advanced AI Architectures. Day 2: Feedback loops, RLHF review. Day 3-5: Capstone Project work.", project: "Capstone 1: Autonomous research assistant. Capstone 2: Voice chatbot with RAG." }
+                    ]
+                }
+            ]
+        };
+
+        function renderCurriculum() {
+            const container = document.getElementById('curriculum-container');
+
+            // Render Overview
+            let overviewHtml = `
+                <div class="overview">
+                    <div class="overview-header">${curriculum.overview.title}</div>
+                    <div class="overview-content">
+                        <p>${curriculum.overview.description}</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Phase</th>
+                                    <th>Weeks</th>
+                                    <th>Core Focus Areas</th>
+                                    <th>Key Learning Outcomes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+            `;
+            curriculum.overview.table.forEach(row => {
+                overviewHtml += `
+                    <tr>
+                        <td>${row.Phase}</td>
+                        <td>${row.Weeks}</td>
+                        <td>${row.CoreFocus}</td>
+                        <td>${row.Outcomes}</td>
+                    </tr>
+                `;
+            });
+            overviewHtml += `</tbody></table></div></div>`;
+            container.innerHTML += overviewHtml;
+
+            // Render Modules
+            curriculum.modules.forEach(module => {
+                let moduleHtml = `
+                    <div class="module">
+                        <div class="module-header">${module.title}</div>
+                        <div class="module-content">
+                            <p>${module.description}</p>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Week</th>
+                                        <th>Focus Area</th>
+                                        <th>Daily Topics (Days 1-5)</th>
+                                        <th>Weekend Project/Activity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                `;
+                module.weeks.forEach(week => {
+                    moduleHtml += `
+                        <tr>
+                            <td>${week.week}</td>
+                            <td><strong>${week.focus}</strong></td>
+                            <td>${week.topics}</td>
+                            <td class="weekend-project">${week.project}</td>
+                        </tr>
+                    `;
+                });
+                moduleHtml += `</tbody></table></div></div>`;
+                container.innerHTML += moduleHtml;
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', renderCurriculum);
+    </script>
+</body>
+</html>
